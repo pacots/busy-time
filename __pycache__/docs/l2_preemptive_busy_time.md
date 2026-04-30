@@ -16,6 +16,8 @@ The implemented part corresponds to:
 - Theorem 7: bounded-capacity conversion that gives a 2-approximation for
   capacity `g`.
 
+---
+
 ## How To Run
 
 From the repository root:
@@ -42,6 +44,8 @@ You can choose a different output prefix:
 python l2_preemptive_busy_time.py jobs_c2.csv --output-prefix my_run
 ```
 
+---
+
 ## Input Format
 
 The script uses the same CSV format as `theorem7.py`:
@@ -59,18 +63,19 @@ Fields:
 
 - `Capacity`: machine capacity `g`.
 - `Job`: job identifier.
-- `Release`: integer release time `r_j`.
-- `Deadline`: integer deadline `d_j`.
-- `processingTime`: integer required processing length `p_j`.
+- `Release`: integer release time $r_j$.
+- `Deadline`: integer deadline $d_j$.
+- `processingTime`: integer required processing length $p_j$.
 
-All numeric input fields must be integers. Decimal values such as `3.0` or
-`3.5` are rejected.
+All numeric input fields must be integers. Decimal values such as `3.0` or `3.5` are rejected.
 
 The script validates that each job is individually feasible:
 
 ```text
-p_j <= d_j - r_j
+processingTime ≤ Deadline - Release
 ```
+
+---
 
 ## Algorithm Implemented
 
@@ -95,16 +100,11 @@ coordinates.
 At each iteration:
 
 1. Consider jobs in nondecreasing deadline order.
-2. For the current job, compute how much already-open active time lies inside
-   its window `[r_j, d_j)`.
-3. If that active time is not enough, add exactly the missing amount as late as
-   possible inside `[r_j, d_j)`.
-4. After all active intervals are chosen, assign each job to active time inside
-   its window, using latest feasible active time first.
+2. For the current job, compute how much already-open active time lies inside its window $[r_j, d_j)$.
+3. If that active time is not enough, add exactly the missing amount as late as possible inside $[r_j, d_j)$.
+4. After all active intervals are chosen, assign each job to active time inside its window, using latest feasible active time first.
 
-This is the same contraction argument represented on the uncompressed original
-timeline. The result is the unbounded schedule `S_infinity`, which is optimal
-when machine capacity is unbounded.
+This is the same contraction argument represented on the uncompressed original timeline. The result is the unbounded schedule $S_{\infty}$, which is optimal when machine capacity is unbounded.
 
 ### Step 2: Bounded Capacity `g`
 
@@ -119,19 +119,14 @@ Theorem 7.
 
 The conversion:
 
-1. Splits `S_infinity` into interesting intervals. These are maximal intervals
+1. Splits $S_{\infty}$ into interesting intervals. These are maximal intervals
    where the set of running jobs does not change.
-2. For each interesting interval `I_i`, finds the jobs running in that interval.
-3. Assigns those jobs to:
+2. For each interesting interval $I_i$, finds the jobs running in that interval.
+3. Assigns those jobs to $ceil(n(I_i) / g)$ machines, filling each machine greedily up to capacity `g`.
 
-```text
-ceil(n(I_i) / g)
-```
+The output is a feasible preemptive schedule whose busy time is at most twice the optimal bounded-capacity preemptive busy time.
 
-machines, filling each machine greedily up to capacity `g`.
-
-The output is a feasible preemptive schedule whose busy time is at most twice
-the optimal bounded-capacity preemptive busy time.
+---
 
 ## Output Files
 
@@ -144,16 +139,13 @@ outputs/jobs_c2_l2_preemptive/
 Generated files:
 
 - `jobs_c2_l2_preemptive_input_jobs.csv`: normalized copy of the input jobs.
-- `jobs_c2_l2_preemptive_active_iterations.csv`: one row per greedy
-  unbounded step, including the job considered, its deadline, and any newly
-  added active interval.
-- `jobs_c2_l2_preemptive_unbounded_active_intervals.csv`: merged
-  `S_infinity` intervals.
-- `jobs_c2_l2_preemptive_unbounded_schedule.csv`: preemptive job pieces in
-  the unbounded schedule.
-- `jobs_c2_l2_preemptive_bounded_schedule.csv`: bounded-capacity machine
-  pieces after applying Theorem 7.
+- `jobs_c2_l2_preemptive_active_iterations.csv`: one row per greedy unbounded step, including the job considered, its deadline, and any newly added active interval.
+- `jobs_c2_l2_preemptive_unbounded_active_intervals.csv`: merged $S_{\infty}$ intervals.
+- `jobs_c2_l2_preemptive_unbounded_schedule.csv`: preemptive job pieces in the unbounded schedule.
+- `jobs_c2_l2_preemptive_bounded_schedule.csv`: bounded-capacity machine pieces after applying Theorem 7.
 - `jobs_c2_l2_preemptive_summary.csv`: busy-time metrics.
+
+---
 
 ## Notes
 
@@ -164,3 +156,5 @@ Generated files:
   such as `I003_M002`. This mirrors the paper's interval-by-interval assignment:
   the objective is total busy time, not minimizing the number of machine labels.
 - The implementation uses only Python's standard library.
+
+---
