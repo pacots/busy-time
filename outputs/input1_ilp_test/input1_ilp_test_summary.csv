@@ -1,0 +1,6 @@
+Metric,Value
+Solver,cbc
+Status,Optimal
+Machine capacity g,2
+Candidate machines,7
+Bounded busy time,7

@@ -1,0 +1,101 @@
+Iteration,Current job deadline,Added intervals,Added length,Job considered
+1,6,"[5, 6)",1,F
+2,6,none,0,A
+3,9,"[4, 5); [6, 9)",4,D
+4,9,none,0,B
+5,9,none,0,N
+6,10,none,0,C
+7,10,none,0,E
+8,11,none,0,H
+9,11,none,0,M
+10,11,none,0,O
+11,12,none,0,L
+12,12,"[11, 12)",1,R
+13,13,none,0,V
+14,14,none,0,G
+15,14,none,0,J
+16,14,none,0,K
+17,15,none,0,I
+18,15,none,0,Y
+19,16,none,0,Q
+20,16,"[14, 16)",2,P
+21,16,"[13, 14)",1,U
+22,16,none,0,AA
+23,18,none,0,X
+24,18,none,0,AC
+25,18,none,0,AE
+26,18,none,0,AK
+27,20,none,0,S
+28,20,none,0,W
+29,20,none,0,AB
+30,20,none,0,AD
+31,20,"[19, 20)",1,AF
+32,20,none,0,AJ
+33,20,none,0,AO
+34,20,none,0,AU
+35,21,none,0,Z
+36,21,"[20, 21)",1,AG
+37,21,none,0,AL
+38,22,none,0,T
+39,22,none,0,AI
+40,23,none,0,AS
+41,23,"[21, 23)",2,AN
+42,24,none,0,AM
+43,25,none,0,AH
+44,25,none,0,AR
+45,26,"[25, 26)",1,AQ
+46,26,none,0,AT
+47,26,none,0,AX
+48,26,none,0,BA
+49,26,none,0,BC
+50,27,none,0,AP
+51,27,none,0,BD
+52,27,"[26, 27)",1,BG
+53,27,none,0,BJ
+54,28,none,0,AV
+55,28,none,0,BE
+56,28,none,0,BO
+57,29,none,0,AW
+58,29,none,0,AY
+59,29,"[27, 29)",2,BM
+60,30,"[29, 30)",1,BP
+61,31,none,0,BB
+62,31,none,0,BF
+63,31,none,0,BL
+64,31,none,0,CA
+65,31,none,0,CD
+66,32,none,0,AZ
+67,33,none,0,BH
+68,33,none,0,BN
+69,33,none,0,BS
+70,33,none,0,BT
+71,34,none,0,BK
+72,34,none,0,BI
+73,34,"[33, 34)",1,BV
+74,34,"[32, 33)",1,BZ
+75,34,none,0,CE
+76,35,none,0,BQ
+77,35,none,0,CB
+78,36,none,0,BW
+79,36,none,0,BY
+80,37,none,0,BR
+81,37,none,0,CF
+82,37,none,0,CC
+83,37,none,0,CG
+84,37,"[36, 37)",1,CQ
+85,38,none,0,BX
+86,38,none,0,CI
+87,38,"[37, 38)",1,CL
+88,38,none,0,CS
+89,39,none,0,BU
+90,39,none,0,CH
+91,39,none,0,CM
+92,40,none,0,CN
+93,40,"[39, 40)",1,CU
+94,41,none,0,CJ
+95,41,none,0,CK
+96,42,none,0,CP
+97,42,"[41, 42)",1,CV
+98,43,none,0,CT
+99,44,none,0,CO
+100,44,none,0,CR

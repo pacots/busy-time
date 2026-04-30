@@ -1,0 +1,5 @@
+Metric,Value
+Machine capacity g,2
+Unbounded busy time,100
+Bounded busy time,30048
+Bounded / Unbounded ratio,300.48

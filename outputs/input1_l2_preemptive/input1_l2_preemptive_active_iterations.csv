@@ -1,0 +1,8 @@
+Iteration,Current job deadline,Added intervals,Added length,Job considered
+1,4,"[2, 4)",2,A
+2,5,none,0,C
+3,6,"[5, 6)",1,B
+4,7,"[6, 7)",1,D
+5,8,none,0,E
+6,9,"[8, 9)",1,F
+7,9,none,0,G
