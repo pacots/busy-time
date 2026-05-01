@@ -1,0 +1,11 @@
+file,jobs,min_release,max_deadline,min_window_length,max_window_length,avg_window_length,min_processing_time,max_processing_time,total_processing,max_live_jobs,theorem7_unbounded_busy_time,theorem7_bounded_busy_time_g2,bounded_to_unbounded_ratio
+case_01_low_overlap_easy_150_jobs.csv,150,1,1932,23,41,31.99,20,35,4123,4,1649,2500,1.52
+case_02_high_overlap_large_gap_150_jobs.csv,150,1837,2000,100,162,129.41,20,100,9068,150,100,4557,45.57
+case_03_tight_windows_150_jobs.csv,150,8,1946,20,102,60.51,20,100,8659,11,1886,4818,2.55
+case_04_loose_windows_150_jobs.csv,150,2,1992,533,1910,1240.52,20,100,9362,150,100,4708,47.08
+case_05_mixed_windows_150_jobs.csv,150,4,2000,22,1913,375.44,20,100,9370,45,1399,5035,3.6
+case_06_heavy_processing_150_jobs.csv,150,1761,2000,104,233,171.41,80,100,13494,150,100,6753,67.53
+case_07_light_processing_150_jobs.csv,150,1,1922,29,64,46.26,20,40,4494,6,1281,2587,2.02
+case_08_clustered_overlap_150_jobs.csv,150,160,1660,107,219,158.83,20,100,9274,30,500,4751,9.5
+case_09_nested_windows_150_jobs.csv,150,40,1830,128,170,149.0,20,100,9036,15,975,4804,4.93
+case_10_random_valid_150_jobs.csv,150,16,1995,26,255,148.4,20,100,9103,26,1173,4869,4.15
