@@ -1,6 +1,6 @@
 # Busy-Time Scheduling
 
-This repository contains Python implementations of busy-time scheduling algorithms.
+This repository contains Python implementations of busy-time scheduling algorithms. The meeting notes folder contains a final_project_summary.pdf, this file includes the general information regarding the current state of the project and should be read first.
 
 ## Project Structure
 
@@ -27,8 +27,9 @@ Working:
   Documentation: [`docs/l2_preemptive_busy_time.md`](docs/l2_preemptive_busy_time.md).
 - `check_feasibility.py`: Verifies whether a bounded preemptive busy-time schedule is valid with respect to a given input instance of jobs.  
   Documentation: [`docs/check_feasibility.md`](docs/check_feasibility.md).
+- `ilp_busy_time_pulp_gurobi.py`: ILP implementation using PuLP Gurobi.
 
-Currently Worning on:
+Currently Working on:
 
 - `local_search.py`
 - `local_search_busy_time.py`
