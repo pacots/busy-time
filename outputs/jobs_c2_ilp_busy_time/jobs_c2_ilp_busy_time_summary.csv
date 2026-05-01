@@ -1,0 +1,6 @@
+Metric,Value
+Solver,gurobi
+Status,Optimal
+Machine capacity g,2
+Candidate machines,100
+Bounded busy time,149
